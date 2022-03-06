@@ -1,7 +1,7 @@
 package me.earth.earthhack.forge.mixins.network;
 
 import me.earth.earthhack.forge.util.ReplaceNetworkDispatcher;
-import me.earth.earthhack.impl.Dunyahile;
+import me.earth.earthhack.impl.Duny4hil3;
 import net.minecraft.client.network.NetHandlerPlayClient;
 import net.minecraft.network.NetworkManager;
 import net.minecraftforge.fml.common.network.handshake.NetworkDispatcher;
@@ -26,7 +26,7 @@ public abstract class MixinNethandlerPlayClient
         NetworkDispatcher dispatcher = NetworkDispatcher.get(manager);
         if (dispatcher == null)
         {
-            Dunyahile.getLogger().warn("NetworkDispatcher Disconnect avoided!");
+            Duny4hil3.getLogger().warn("NetworkDispatcher Disconnect avoided!");
 
             try
             {

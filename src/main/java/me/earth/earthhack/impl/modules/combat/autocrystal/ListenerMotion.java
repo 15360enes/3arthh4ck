@@ -1,7 +1,7 @@
 package me.earth.earthhack.impl.modules.combat.autocrystal;
 
 import me.earth.earthhack.api.event.events.Stage;
-import me.earth.earthhack.impl.Dunyahile;
+import me.earth.earthhack.impl.Duny4hil3;
 import me.earth.earthhack.impl.event.events.network.MotionUpdateEvent;
 import me.earth.earthhack.impl.event.listeners.ModuleListener;
 import me.earth.earthhack.impl.managers.Managers;
@@ -63,7 +63,7 @@ final class ListenerMotion extends
                         module.wait(module.timeOut.getValue());
                     } catch (InterruptedException e)
                     {
-                        Dunyahile.getLogger()
+                        Duny4hil3.getLogger()
                                 .warn("Minecraft Main-Thread interrupted!");
                         Thread.currentThread().interrupt();
                     }

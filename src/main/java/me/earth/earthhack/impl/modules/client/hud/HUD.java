@@ -7,7 +7,8 @@ import me.earth.earthhack.api.setting.Setting;
 import me.earth.earthhack.api.setting.settings.BooleanSetting;
 import me.earth.earthhack.api.setting.settings.ColorSetting;
 import me.earth.earthhack.api.setting.settings.EnumSetting;
-import me.earth.earthhack.impl.Dunyahile;
+import me.earth.earthhack.api.setting.settings.StringSetting;
+import me.earth.earthhack.impl.Duny4hil3;
 import me.earth.earthhack.impl.managers.Managers;
 import me.earth.earthhack.impl.managers.render.TextRenderer;
 import me.earth.earthhack.impl.modules.client.hud.arraylist.ArrayEntry;
@@ -21,6 +22,7 @@ import me.earth.earthhack.impl.util.network.ServerUtil;
 import me.earth.earthhack.impl.util.render.ColorHelper;
 import me.earth.earthhack.impl.util.render.ColorUtil;
 import me.earth.earthhack.impl.util.text.TextColor;
+import me.earth.earthhack.installer.version.Version;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.ScaledResolution;
@@ -43,38 +45,40 @@ import java.util.stream.Collectors;
 public class HUD extends Module {
     public static final TextRenderer RENDERER = Managers.TEXT;
 
-    //protected final Setting<RenderMode> renderMode    =
-    //register(new EnumSetting<>("RenderMode", RenderMode.NORMAL));
     protected final Setting<RenderMode> renderMode =
             register(new EnumSetting<>("RenderMode", RenderMode.Normal));
     protected final Setting<HudRainbow> colorMode =
-            register(new EnumSetting<>("Rainbow", HudRainbow.None));
+            register(new EnumSetting<>("EbemKusagi", HudRainbow.None));
     protected final Setting<Color> color =
             register(new ColorSetting("Color", Color.WHITE));
     protected final Setting<Boolean> logo =
             register(new BooleanSetting("Logo", true));
+    protected final Setting<Boolean> logover =
+            register(new BooleanSetting("LogoVersiyonu" , true));
+    protected final Setting<String> logostring =
+            register(new StringSetting("Logoismi" , "Duny4hil3"));
     protected final Setting<Boolean> coordinates =
-            register(new BooleanSetting("Coordinates", true));
+            register(new BooleanSetting("Kordinatlar", true));
     protected final Setting<Boolean> armor =
-            register(new BooleanSetting("Armor", true));
+            register(new BooleanSetting("Zirh", true));
     protected final Setting<Modules> renderModules =
-            register(new EnumSetting<>("Modules", Modules.Length));
+            register(new EnumSetting<>("Moduller", Modules.Length));
     protected final Setting<Potions> potions =
-            register(new EnumSetting<>("Potions", Potions.Move));
+            register(new EnumSetting<>("Iksirler", Potions.Move));
     protected final Setting<PotionColor> potionColor =
-            register(new EnumSetting<>("PotionColor", PotionColor.Normal));
+            register(new EnumSetting<>("Iksirrengi", PotionColor.Normal));
     protected final Setting<Boolean> shadow =
-            register(new BooleanSetting("Shadow", true));
+            register(new BooleanSetting("Golgeler", true));
     protected final Setting<Boolean> ping =
-            register(new BooleanSetting("Ping", false));
+            register(new BooleanSetting("Gecikme", false));
     protected final Setting<Boolean> speed =
-            register(new BooleanSetting("Speed", false));
+            register(new BooleanSetting("Hiz", false));
     protected final Setting<Boolean> fps =
             register(new BooleanSetting("FPS", false));
     protected final Setting<Boolean> tps =
             register(new BooleanSetting("TPS", false));
     protected final Setting<Boolean> animations =
-            register(new BooleanSetting("Animations", true));
+            register(new BooleanSetting("Animasyonlar", true));
 
     protected final List<Map.Entry<String, Module>> modules = new ArrayList<>();
 
@@ -122,8 +126,8 @@ public class HUD extends Module {
     }
 
     protected void renderLogo() {
-        if (logo.getValue()) {
-            renderText("3arthh4ck - " + Dunyahile.VERSION, 2, 2);
+        if (logo.getValue() || logover.getValue()) {
+            renderText(logostring.getValue() + (logover.getValue() ? (" " + Duny4hil3.VERSION) : ""), 2, 2);
         }
     }
 

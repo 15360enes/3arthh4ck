@@ -7,7 +7,7 @@ import me.earth.earthhack.api.command.Completer;
 import me.earth.earthhack.api.command.PossibleInputs;
 import me.earth.earthhack.api.util.TextUtil;
 import me.earth.earthhack.api.util.interfaces.Globals;
-import me.earth.earthhack.impl.Dunyahile;
+import me.earth.earthhack.impl.Duny4hil3;
 import me.earth.earthhack.impl.commands.packet.arguments.AdvancementArgument;
 import me.earth.earthhack.impl.commands.packet.arguments.AdvancementProgressArgument;
 import me.earth.earthhack.impl.commands.packet.arguments.AttributeArgument;
@@ -691,7 +691,7 @@ public class PacketCommandImpl extends Command implements Globals, PacketCommand
                     {
                         if (!arguments.containsKey(type))
                         {
-                            Dunyahile.getLogger().error(
+                            Duny4hil3.getLogger().error(
                                     "<PacketCommand>" +
                                             " No Argument found for: "
                                             + type.getName()
@@ -708,7 +708,7 @@ public class PacketCommandImpl extends Command implements Globals, PacketCommand
                                    .equals(packet.getSimpleName())
                         && !alreadyExisting.equals(packet))
                 {
-                    Dunyahile.getLogger().warn(alreadyExisting.getName()
+                    Duny4hil3.getLogger().warn(alreadyExisting.getName()
                             + " SimpleName clashes with: " + packet.getName());
                 }
             }

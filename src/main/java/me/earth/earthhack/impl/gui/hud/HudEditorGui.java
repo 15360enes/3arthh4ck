@@ -1,7 +1,7 @@
 package me.earth.earthhack.impl.gui.hud;
 
 import me.earth.earthhack.api.hud.HudElement;
-import me.earth.earthhack.impl.Dunyahile;
+import me.earth.earthhack.impl.Duny4hil3;
 import me.earth.earthhack.impl.managers.Managers;
 import me.earth.earthhack.impl.util.misc.GuiUtil;
 import net.minecraft.client.Minecraft;
@@ -123,7 +123,7 @@ public class HudEditorGui extends GuiScreen {
         for (SnapPoint point : snapPoints) {
             point.update(mouseX, mouseY, partialTicks);
             point.draw(mouseX, mouseY, partialTicks);
-            Dunyahile.getLogger().info(point.orientation.name() + " x: " + point.getX() + " y: " + point.getY() + " length: " + point.getLength());
+            Duny4hil3.getLogger().info(point.orientation.name() + " x: " + point.getX() + " y: " + point.getY() + " length: " + point.getLength());
         }
         for (SnapPoint point : moduleSnapPoints.values()) {
             point.update(mouseX, mouseY, partialTicks);

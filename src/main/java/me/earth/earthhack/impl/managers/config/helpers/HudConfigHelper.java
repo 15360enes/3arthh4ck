@@ -9,7 +9,7 @@ import me.earth.earthhack.api.hud.HudElement;
 import me.earth.earthhack.api.register.Register;
 import me.earth.earthhack.api.setting.GeneratedSettings;
 import me.earth.earthhack.api.setting.Setting;
-import me.earth.earthhack.impl.Dunyahile;
+import me.earth.earthhack.impl.Duny4hil3;
 
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -59,7 +59,7 @@ public class HudConfigHelper extends AbstractConfigHelper<ElementConfig> {
             HudElement module = elements.getObject(entry.getKey());
             if (module == null)
             {
-                Dunyahile.getLogger().error("Config: Couldn't find element: "
+                Duny4hil3.getLogger().error("Config: Couldn't find element: "
                         + entry.getKey());
                 continue;
             }
@@ -72,7 +72,7 @@ public class HudConfigHelper extends AbstractConfigHelper<ElementConfig> {
                 Setting<?> setting = module.getSettingConfig(s.getKey());
                 if (setting == null)
                 {
-                    Dunyahile.getLogger().error(
+                    Duny4hil3.getLogger().error(
                             "Config: Couldn't find setting: " + s.getKey()
                                     + " in element: " + module.getName() + ".");
                     continue;

@@ -1,7 +1,7 @@
 package me.earth.earthhack.impl.managers.thread.lookup;
 
 import me.earth.earthhack.api.util.interfaces.Globals;
-import me.earth.earthhack.impl.Dunyahile;
+import me.earth.earthhack.impl.Duny4hil3;
 import me.earth.earthhack.tweaker.launch.Argument;
 import me.earth.earthhack.tweaker.launch.DevArguments;
 import me.earth.earthhack.impl.util.thread.LookUpUtil;
@@ -25,7 +25,7 @@ public class LookUpManager implements Globals
     static
     {
         Argument<Long> a = DevArguments.getInstance().getArgument("connection");
-        Dunyahile.getLogger().info("Connection Timeout: " + a.getValue());
+        Duny4hil3.getLogger().info("Connection Timeout: " + a.getValue());
         CONNECTION_COOLDOWN = a.getValue();
     }
 

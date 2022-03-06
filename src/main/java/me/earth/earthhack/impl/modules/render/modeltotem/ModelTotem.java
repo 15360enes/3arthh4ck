@@ -74,4 +74,5 @@ public class ModelTotem extends Module
         this.listeners.add(new ListenerRenderItemActivation(this));
     }
 
+
 }

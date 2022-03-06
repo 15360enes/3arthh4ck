@@ -1,4 +1,4 @@
-package me.earth.earthhack.impl.modules.movement.speed;
+package me.earth.earthhack.impl.modules.movement.speed2;
 
 import me.earth.earthhack.impl.event.events.network.PacketEvent;
 import me.earth.earthhack.impl.event.listeners.ModuleListener;
@@ -7,9 +7,9 @@ import me.earth.earthhack.impl.util.minecraft.MovementUtil;
 import net.minecraft.network.play.server.SPacketPlayerPosLook;
 
 public final class ListenerPosLook extends
-        ModuleListener<Speed, PacketEvent.Receive<SPacketPlayerPosLook>>
+        ModuleListener<Speed2, PacketEvent.Receive<SPacketPlayerPosLook>>
 {
-    public ListenerPosLook(Speed module)
+    public ListenerPosLook(Speed2 module)
     {
         super(module, PacketEvent.Receive.class, SPacketPlayerPosLook.class);
     }

@@ -3,7 +3,7 @@ package me.earth.earthhack.impl.managers.config.helpers;
 import com.google.gson.JsonObject;
 import me.earth.earthhack.api.config.Config;
 import me.earth.earthhack.api.config.ConfigHelper;
-import me.earth.earthhack.impl.Dunyahile;
+import me.earth.earthhack.impl.Duny4hil3;
 import me.earth.earthhack.impl.managers.config.util.ConfigDeleteException;
 import me.earth.earthhack.impl.managers.config.util.JsonPathWriter;
 import me.earth.earthhack.impl.util.misc.FileUtil;
@@ -85,7 +85,7 @@ public abstract class AbstractConfigHelper<C extends Config>
             {
                 try
                 {
-                    Dunyahile.getLogger().info(this.getName()
+                    Duny4hil3.getLogger().info(this.getName()
                                                 + " config found : "
                                                 + p);
                     C config = read(p);

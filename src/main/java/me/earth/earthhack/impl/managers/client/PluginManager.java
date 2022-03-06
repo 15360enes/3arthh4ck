@@ -3,7 +3,7 @@ package me.earth.earthhack.impl.managers.client;
 import me.earth.earthhack.api.config.Jsonable;
 import me.earth.earthhack.api.plugin.Plugin;
 import me.earth.earthhack.api.plugin.PluginConfig;
-import me.earth.earthhack.impl.Dunyahile;
+import me.earth.earthhack.impl.Duny4hil3;
 import me.earth.earthhack.impl.core.Core;
 import me.earth.earthhack.impl.managers.client.exception.BadPluginException;
 import me.earth.earthhack.impl.util.misc.ReflectionUtil;
@@ -124,13 +124,13 @@ public class PluginManager
         {
             if (plugins.containsKey(config))
             {
-                Dunyahile.getLogger().error("Can't register Plugin "
+                Duny4hil3.getLogger().error("Can't register Plugin "
                         + config.getName()
                         + ", a plugin with that name is already registered.");
                 continue;
             }
 
-            Dunyahile.getLogger().info("Instantiating: "
+            Duny4hil3.getLogger().info("Instantiating: "
                                     + config.getName()
                                     + ", MainClass: "
                                     + config.getMainClass());
@@ -144,7 +144,7 @@ public class PluginManager
             }
             catch (Throwable e)
             {
-                Dunyahile.getLogger().error("Error instantiating : "
+                Duny4hil3.getLogger().error("Error instantiating : "
                         + config.getName() + ", caused by:");
 
                 e.printStackTrace();

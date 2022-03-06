@@ -2,7 +2,7 @@ package me.earth.earthhack.impl.core.mixins;
 
 import me.earth.earthhack.api.cache.ModuleCache;
 import me.earth.earthhack.api.event.bus.instance.Bus;
-import me.earth.earthhack.impl.Dunyahile;
+import me.earth.earthhack.impl.Duny4hil3;
 import me.earth.earthhack.impl.core.ducks.IMinecraft;
 import me.earth.earthhack.impl.event.events.client.ShutDownEvent;
 import me.earth.earthhack.impl.event.events.keyboard.ClickLeftEvent;
@@ -177,7 +177,7 @@ public abstract class MixinMinecraft implements IMinecraft
                     shift = At.Shift.AFTER))
     private void preInitHook(CallbackInfo ci)
     {
-        Dunyahile.preInit();
+        Duny4hil3.preInit();
     }
 
     @Inject(
@@ -189,8 +189,8 @@ public abstract class MixinMinecraft implements IMinecraft
                     shift = At.Shift.BEFORE))
     private void initHook2(CallbackInfo ci)
     {
-        Dunyahile.init();
-        Dunyahile.postInit();
+        Duny4hil3.init();
+        Duny4hil3.postInit();
     }
 
     @Inject(method = "runGameLoop", at = @At("HEAD"))
@@ -460,7 +460,7 @@ public abstract class MixinMinecraft implements IMinecraft
         at = @At(value = "HEAD"))
     private void shutdownMinecraftAppletHook(CallbackInfo info)
     {
-        Dunyahile.getLogger().info("Shutting down 3arthh4ck.");
+        Duny4hil3.getLogger().info("Shutting down 3arthh4ck.");
         Bus.EVENT_BUS.post(new ShutDownEvent());
 
         try

@@ -7,7 +7,7 @@ import me.earth.earthhack.api.register.exception.CantUnregisterException;
 import me.earth.earthhack.api.util.TextUtil;
 import me.earth.earthhack.api.util.bind.Bind;
 import me.earth.earthhack.api.util.interfaces.Globals;
-import me.earth.earthhack.impl.Dunyahile;
+import me.earth.earthhack.impl.Duny4hil3;
 import me.earth.earthhack.impl.commands.gui.YesNoNonPausing;
 import me.earth.earthhack.impl.commands.util.CommandUtil;
 import me.earth.earthhack.impl.managers.Managers;
@@ -67,7 +67,7 @@ public abstract class AbstractMultiMacroCommand<T extends Macro>
             if (macro.getType() == MacroType.COMBINED
                         || macro.getType() == MacroType.FLOW)
             {
-                Dunyahile.getLogger().info("Creating Delegate for Macro: "
+                Duny4hil3.getLogger().info("Creating Delegate for Macro: "
                         + macro.getName()
                         + " : "
                         + Arrays.toString(macro.getCommands()));

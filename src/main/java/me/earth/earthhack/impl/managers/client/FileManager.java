@@ -1,7 +1,7 @@
 package me.earth.earthhack.impl.managers.client;
 
 import jassimp.AiScene;
-import me.earth.earthhack.impl.Dunyahile;
+import me.earth.earthhack.impl.Duny4hil3;
 import me.earth.earthhack.impl.util.render.image.GifConverter;
 import me.earth.earthhack.impl.util.render.image.GifImage;
 import me.earth.earthhack.impl.util.render.image.ImageUtil;
@@ -99,7 +99,7 @@ public class FileManager
                         }
                         catch (IOException e)
                         {
-                            Dunyahile.getLogger().error("Failed to load gif image " + file.getName() + "!");
+                            Duny4hil3.getLogger().error("Failed to load gif image " + file.getName() + "!");
                             e.printStackTrace();
                         }
                     }
@@ -119,7 +119,7 @@ public class FileManager
                     }
                     catch (IOException | NoSuchAlgorithmException e)
                     {
-                        Dunyahile.getLogger().error("Failed to load image " + file.getName() + "!");
+                        Duny4hil3.getLogger().error("Failed to load image " + file.getName() + "!");
                         e.printStackTrace();
                     }
                 }
@@ -151,7 +151,7 @@ public class FileManager
                     }
                     catch (IOException e)
                     {
-                        Dunyahile.getLogger().error("Failed to load model: " + file.getName() + "!");
+                        Duny4hil3.getLogger().error("Failed to load model: " + file.getName() + "!");
                         e.printStackTrace();
                     }
                 }
@@ -175,7 +175,7 @@ public class FileManager
                 }
                 catch (IOException e)
                 {
-                    Dunyahile.getLogger().error("Failed to shader model: " + file.getName() + "!");
+                    Duny4hil3.getLogger().error("Failed to shader model: " + file.getName() + "!");
                     e.printStackTrace();
                 }
             }

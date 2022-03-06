@@ -1,7 +1,7 @@
 package me.earth.earthhack.impl.util.render;
 
 import me.earth.earthhack.api.util.interfaces.Globals;
-import me.earth.earthhack.impl.Dunyahile;
+import me.earth.earthhack.impl.Duny4hil3;
 import me.earth.earthhack.impl.core.ducks.entity.IEntityRenderer;
 import me.earth.earthhack.impl.core.ducks.render.IRenderManager;
 import me.earth.earthhack.impl.managers.Managers;
@@ -152,7 +152,7 @@ public class RenderUtil implements Globals
         }
         else
         {
-            Dunyahile.getLogger().info("VBOs not supported, skipping.");
+            Duny4hil3.getLogger().info("VBOs not supported, skipping.");
         }
     }
 

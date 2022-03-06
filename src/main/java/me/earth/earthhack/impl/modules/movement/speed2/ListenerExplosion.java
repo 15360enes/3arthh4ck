@@ -1,4 +1,4 @@
-package me.earth.earthhack.impl.modules.movement.speed;
+package me.earth.earthhack.impl.modules.movement.speed2;
 
 import me.earth.earthhack.impl.event.events.network.PacketEvent;
 import me.earth.earthhack.impl.event.listeners.ModuleListener;
@@ -9,9 +9,9 @@ import net.minecraft.util.math.BlockPos;
 
 //TODO: Make this even better
 public final class ListenerExplosion extends
-        ModuleListener<Speed, PacketEvent.Receive<SPacketExplosion>>
+        ModuleListener<Speed2, PacketEvent.Receive<SPacketExplosion>>
 {
-    public ListenerExplosion(Speed module)
+    public ListenerExplosion(Speed2 module)
     {
         super(module, PacketEvent.Receive.class, SPacketExplosion.class);
     }
@@ -25,23 +25,23 @@ public final class ListenerExplosion extends
         {
             SPacketExplosion packet = event.getPacket();
             BlockPos pos = new BlockPos(packet.getX(),
-                                        packet.getY(),
-                                        packet.getZ());
+                    packet.getY(),
+                    packet.getZ());
 
             if (mc.player.getDistanceSq(pos) < 100
                     && (!module.directional.getValue()
-                        || !MovementUtil.isInMovementDirection(packet.getX(),
-                                                               packet.getY(),
-                                                               packet.getZ())))
+                    || !MovementUtil.isInMovementDirection(packet.getX(),
+                    packet.getY(),
+                    packet.getZ())))
             {
                 double speed = Math.sqrt(
                         packet.getMotionX() * packet.getMotionX()
-                        + packet.getMotionZ() * packet.getMotionZ());
+                                + packet.getMotionZ() * packet.getMotionZ());
 
                 module.lastExp = module.expTimer
-                                       .passed(module.coolDown.getValue())
-                                            ? speed
-                                            : (speed - module.lastExp);
+                        .passed(module.coolDown.getValue())
+                        ? speed
+                        : (speed - module.lastExp);
 
                 if (module.lastExp > 0)
                 {

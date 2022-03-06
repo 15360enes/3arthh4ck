@@ -6,7 +6,7 @@ import me.earth.earthhack.api.register.Register;
 import me.earth.earthhack.api.setting.Setting;
 import me.earth.earthhack.api.setting.settings.BindSetting;
 import me.earth.earthhack.api.util.IdentifiedNameable;
-import me.earth.earthhack.impl.Dunyahile;
+import me.earth.earthhack.impl.Duny4hil3;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -40,7 +40,7 @@ public class BindConfig extends IdentifiedNameable implements Config
             Module module = modules.getObject(wrapper.getModule());
             if (module == null)
             {
-                Dunyahile.getLogger().error("BindWrapper: Couldn't find module: "
+                Duny4hil3.getLogger().error("BindWrapper: Couldn't find module: "
                                          + wrapper.getModule() + ".");
                 continue;
             }
@@ -48,7 +48,7 @@ public class BindConfig extends IdentifiedNameable implements Config
             Setting<?> setting = module.getSettingConfig(wrapper.getName());
             if (setting == null)
             {
-                Dunyahile.getLogger().error("BindWrapper: Couldn't find setting: "
+                Duny4hil3.getLogger().error("BindWrapper: Couldn't find setting: "
                                         + wrapper.getName() + " in module: "
                                         + wrapper.getModule() + ".");
                 continue;

@@ -2,7 +2,7 @@ package me.earth.earthhack.impl.modules.combat.autocrystal;
 
 import me.earth.earthhack.api.cache.ModuleCache;
 import me.earth.earthhack.api.util.interfaces.Globals;
-import me.earth.earthhack.impl.Dunyahile;
+import me.earth.earthhack.impl.Duny4hil3;
 import me.earth.earthhack.impl.core.ducks.entity.IEntity;
 import me.earth.earthhack.impl.managers.Managers;
 import me.earth.earthhack.impl.modules.Caches;
@@ -681,7 +681,7 @@ public abstract class AbstractCalculation<T extends CrystalData>
                               .setTargetPos(antiTotemData.getPos());
 
                         EntityPlayer player = antiTotemData.getFirstTarget();
-                        Dunyahile.getLogger().info("Attempting God-AntiTotem: "
+                        Duny4hil3.getLogger().info("Attempting God-AntiTotem: "
                                 + (player == null ? "null" : player.getName()));
 
                         place(antiTotemData, player, false, false, false);
@@ -728,7 +728,7 @@ public abstract class AbstractCalculation<T extends CrystalData>
                 return false;
             }
 
-            Dunyahile.getLogger().info("Attempting AntiTotem: "
+            Duny4hil3.getLogger().info("Attempting AntiTotem: "
                     + (player == null ? "null" : player.getName()));
 
             module.antiTotemHelper.setTargetPos(antiTotem.getPos());

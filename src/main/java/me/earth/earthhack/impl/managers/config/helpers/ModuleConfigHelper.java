@@ -9,7 +9,7 @@ import me.earth.earthhack.api.module.Module;
 import me.earth.earthhack.api.register.Register;
 import me.earth.earthhack.api.setting.GeneratedSettings;
 import me.earth.earthhack.api.setting.Setting;
-import me.earth.earthhack.impl.Dunyahile;
+import me.earth.earthhack.impl.Duny4hil3;
 
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -59,7 +59,7 @@ public class ModuleConfigHelper extends AbstractConfigHelper<ModuleConfig>
             Module module = modules.getObject(entry.getKey());
             if (module == null)
             {
-                Dunyahile.getLogger().error("Config: Couldn't find module: "
+                Duny4hil3.getLogger().error("Config: Couldn't find module: "
                                             + entry.getKey());
                 continue;
             }
@@ -74,7 +74,7 @@ public class ModuleConfigHelper extends AbstractConfigHelper<ModuleConfig>
                 Setting<?> setting = module.getSettingConfig(s.getKey());
                 if (setting == null)
                 {
-                    Dunyahile.getLogger().error(
+                    Duny4hil3.getLogger().error(
                         "Config: Couldn't find setting: " + s.getKey()
                             + " in module: " + module.getName() + ".");
                     continue;

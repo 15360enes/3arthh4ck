@@ -6,7 +6,7 @@ import me.earth.earthhack.api.module.util.Category;
 import me.earth.earthhack.api.register.IterationRegister;
 import me.earth.earthhack.api.register.Registrable;
 import me.earth.earthhack.api.register.exception.CantUnregisterException;
-import me.earth.earthhack.impl.Dunyahile;
+import me.earth.earthhack.impl.Duny4hil3;
 import me.earth.earthhack.impl.event.events.client.PostInitEvent;
 import me.earth.earthhack.impl.modules.Caches;
 import me.earth.earthhack.impl.modules.client.autoconfig.AutoConfig;
@@ -102,6 +102,7 @@ import me.earth.earthhack.impl.modules.movement.phase.Phase;
 import me.earth.earthhack.impl.modules.movement.reversestep.ReverseStep;
 import me.earth.earthhack.impl.modules.movement.safewalk.SafeWalk;
 import me.earth.earthhack.impl.modules.movement.speed.Speed;
+import me.earth.earthhack.impl.modules.movement.speed2.Speed2;
 import me.earth.earthhack.impl.modules.movement.step.Step;
 import me.earth.earthhack.impl.modules.movement.velocity.Velocity;
 import me.earth.earthhack.impl.modules.player.arrows.Arrows;
@@ -172,7 +173,7 @@ public class ModuleManager extends IterationRegister<Module>
 {
     public void init()
     {
-        Dunyahile.getLogger().info("Initializing Modules.");
+        Duny4hil3.getLogger().info("Initializing Modules.");
         this.forceRegister(new AutoConfig());
         this.forceRegister(new ClickGui());
         this.forceRegister(new Colors());
@@ -200,8 +201,6 @@ public class ModuleManager extends IterationRegister<Module>
         this.forceRegister(new BowKiller());
         this.forceRegister(new Criticals());
         this.forceRegister(new CrystalBomber());
-        //this.forceRegister(new BowKiller());
-        //this.forceRegister(new HoleFiller());
         this.forceRegister(new HoleFiller());
         this.forceRegister(new KillAura());
         this.forceRegister(new LegSwitch());
@@ -270,6 +269,7 @@ public class ModuleManager extends IterationRegister<Module>
         this.forceRegister(new Phase());
         this.forceRegister(new SafeWalk());
         this.forceRegister(new Speed());
+        this.forceRegister(new Speed2());
         this.forceRegister(new Step());
         this.forceRegister(new Velocity());
 

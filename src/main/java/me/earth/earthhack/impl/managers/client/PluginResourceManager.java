@@ -1,7 +1,7 @@
 package me.earth.earthhack.impl.managers.client;
 
 import me.earth.earthhack.api.util.interfaces.Globals;
-import me.earth.earthhack.impl.Dunyahile;
+import me.earth.earthhack.impl.Duny4hil3;
 import me.earth.earthhack.impl.core.ducks.IMinecraft;
 import me.earth.earthhack.impl.managers.client.resource.PluginResourceLocation;
 import me.earth.earthhack.impl.managers.client.resource.PluginResourceSupplier;
@@ -52,7 +52,7 @@ public class PluginResourceManager implements Globals
 
         if (suppliers != null)
         {
-            Dunyahile.getLogger().info("Found "
+            Duny4hil3.getLogger().info("Found "
                 + suppliers.size()
                 + " custom ResourceLocation"
                 + (suppliers.size() == 1 ? "" : "s")
@@ -95,7 +95,7 @@ public class PluginResourceManager implements Globals
     public void register(ResourceLocation location,
                          PluginResourceLocation resourceLocation)
     {
-        Dunyahile.getLogger().info("Adding custom ResourceLocation: "
+        Duny4hil3.getLogger().info("Adding custom ResourceLocation: "
                 + location + " for: " + resourceLocation);
 
         ClassLoader loader = PluginManager.getInstance().getPluginClassLoader();

@@ -1,6 +1,6 @@
 package me.earth.earthhack.impl.modules.client.pingbypass.packets;
 
-import me.earth.earthhack.impl.Dunyahile;
+import me.earth.earthhack.impl.Duny4hil3;
 import net.minecraft.network.PacketBuffer;
 import net.minecraft.network.play.server.SPacketCustomPayload;
 
@@ -22,14 +22,14 @@ public class PayloadManager
         }
         catch (Exception e)
         {
-            Dunyahile.getLogger().error("Could not read id from PayloadPacket.");
+            Duny4hil3.getLogger().error("Could not read id from PayloadPacket.");
             return;
         }
 
         PayloadReader reader = readers.get(id);
         if (reader == null)
         {
-            Dunyahile.getLogger().error("Couldn't find PayloadReader for ID: " + id);
+            Duny4hil3.getLogger().error("Couldn't find PayloadReader for ID: " + id);
             return;
         }
 

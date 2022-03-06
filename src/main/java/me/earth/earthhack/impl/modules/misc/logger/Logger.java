@@ -5,7 +5,7 @@ import me.earth.earthhack.api.setting.Setting;
 import me.earth.earthhack.api.setting.settings.BooleanSetting;
 import me.earth.earthhack.api.setting.settings.EnumSetting;
 import me.earth.earthhack.api.util.TextUtil;
-import me.earth.earthhack.impl.Dunyahile;
+import me.earth.earthhack.impl.Duny4hil3;
 import me.earth.earthhack.impl.modules.misc.logger.util.LoggerMode;
 import me.earth.earthhack.impl.util.helpers.addable.RegisteringModule;
 import me.earth.earthhack.impl.util.helpers.addable.setting.SimpleRemovingSetting;
@@ -164,7 +164,7 @@ public class Logger extends RegisteringModule<Boolean, SimpleRemovingSetting>
             });
         }
 
-        Dunyahile.getLogger().info(s);
+        Duny4hil3.getLogger().info(s);
 
         if (stackTrace.getValue())
         {

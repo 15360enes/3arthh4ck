@@ -16,6 +16,7 @@ import net.minecraft.client.renderer.entity.RenderEnderCrystal;
 import net.minecraft.client.renderer.entity.RenderLivingBase;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.ResourceLocation;
+import org.lwjgl.opengl.GL11;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Redirect;
@@ -70,16 +71,21 @@ public abstract class MixinRenderEnderCrystal {
             GlStateManager.scale(crystalScale, crystalScale, crystalScale);
         }
 
-        /*if (CHAMS.isEnabled()) {
+        if (CHAMS.isEnabled()) {
             if (CHAMS.get().mode.getValue() == ChamsMode.Gradient) {
-                glPushAttrib(GL_ALL_ATTRIB_BITS);
-                glEnable(GL_BLEND);
-                glDisable(GL_LIGHTING);
-                glDisable(GL_TEXTURE_2D);
                 float alpha = CHAMS.get().color.getValue().getAlpha() / 255.0f;
+                GL11.glPushMatrix();
+                GL11.glPushAttrib(GL11.GL_ALL_ATTRIB_BITS);
+                GL11.glPolygonMode(GL11.GL_FRONT_AND_BACK, GL11.GL_FILL);
+                GL11.glDisable(GL11.GL_TEXTURE_2D);
+                GL11.glDisable(GL11.GL_LIGHTING);
+                GL11.glDisable(GL11.GL_DEPTH_TEST);
+                GL11.glEnable(GL11.GL_LINE_SMOOTH);
+                GL11.glEnable(GL11.GL_BLEND);
+                GL11.glBlendFunc(GL11.GL_SRC_ALPHA, GL11.GL_ONE_MINUS_SRC_ALPHA);
                 glColor4f(1.0f, 1.0f, 1.0f, alpha);
                 modelBase.render(entityIn, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch, scale);
-                glEnable(GL_TEXTURE_2D);
+
 
                 glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
                 float f = (float)entityIn.ticksExisted + Minecraft.getMinecraft().getRenderPartialTicks();
@@ -93,7 +99,7 @@ public abstract class MixinRenderEnderCrystal {
                 for (int i = 0; i < 2; ++i)
                 {
                     GlStateManager.disableLighting();
-                    // GlStateManager.blendFunc(GlStateManager.SourceFactor.SRC_COLOR, GlStateManager.DestFactor.ONE);
+                    GlStateManager.blendFunc(GlStateManager.SourceFactor.SRC_COLOR, GlStateManager.DestFactor.ONE);
                     GlStateManager.color(1.0f, 1.0f, 1.0f, alpha);
                     GlStateManager.matrixMode(5890);
                     GlStateManager.loadIdentity();
@@ -143,7 +149,7 @@ public abstract class MixinRenderEnderCrystal {
                     glEnable(GL_POLYGON_OFFSET_LINE);
                     if (CHAMS.get().throughWalls.getValue()) {
                         glDepthMask(false);
-                        glDisable(GL_DEPTH_TEST);
+                            glDisable(2929);
                     }
                     glColor4f(chamsColor.getRed() / 255.0f, chamsColor.getGreen() / 255.0f, chamsColor.getBlue() / 255.0f, chamsColor.getAlpha() / 255.0f);
                     modelBase.render(entityIn, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch, scale);
@@ -152,7 +158,7 @@ public abstract class MixinRenderEnderCrystal {
             }
         } else {
             modelBase.render(entityIn, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch, scale);
-        }*/
+        }
         RenderEnderCrystal renderLiving = RenderEnderCrystal.class.cast(this);
         CrystalRenderEvent.Pre pre = new CrystalRenderEvent.Pre(renderLiving, entityIn, modelBase, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch, scale);
         Bus.EVENT_BUS.post(pre);

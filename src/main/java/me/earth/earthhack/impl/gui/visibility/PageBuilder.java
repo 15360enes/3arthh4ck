@@ -2,7 +2,7 @@ package me.earth.earthhack.impl.gui.visibility;
 
 import me.earth.earthhack.api.setting.Setting;
 import me.earth.earthhack.api.setting.SettingContainer;
-import me.earth.earthhack.impl.Dunyahile;
+import me.earth.earthhack.impl.Duny4hil3;
 
 import java.util.AbstractMap;
 import java.util.ArrayList;
@@ -133,7 +133,7 @@ public class PageBuilder<T>
                 if (!started)
                 {
                     // Exception would be too harsh imo
-                    Dunyahile.getLogger().warn("PageBuilder: found end: "
+                    Duny4hil3.getLogger().warn("PageBuilder: found end: "
                             + end.getName()
                             + " but not start!");
                     return this;
@@ -146,7 +146,7 @@ public class PageBuilder<T>
 
         if (started)
         {
-            Dunyahile.getLogger().warn("PageBuilder: found start: "
+            Duny4hil3.getLogger().warn("PageBuilder: found start: "
                     + start.getName()
                     + " but not end!");
             return this;

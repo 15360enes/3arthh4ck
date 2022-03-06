@@ -3,7 +3,7 @@ package me.earth.earthhack.impl.managers;
 import me.earth.earthhack.api.event.bus.api.EventBus;
 import me.earth.earthhack.api.event.bus.instance.Bus;
 import me.earth.earthhack.api.plugin.Plugin;
-import me.earth.earthhack.impl.Dunyahile;
+import me.earth.earthhack.impl.Duny4hil3;
 import me.earth.earthhack.impl.managers.chat.ChatManager;
 import me.earth.earthhack.impl.managers.chat.CommandManager;
 import me.earth.earthhack.impl.managers.chat.WrapManager;
@@ -79,7 +79,7 @@ public class Managers
     /** Loads all Managers. Shouldn't be called more than once. */
     public static void load()
     {
-        Dunyahile.getLogger().info("Subscribing Managers.");
+        Duny4hil3.getLogger().info("Subscribing Managers.");
 
         subscribe(TIMER, CONNECT, CHAT, COMBAT, POSITION, ROTATION, SERVER,
                   ACTION, SPEED, SWITCH, TPS, HOLES, SAFETY, KEYBOARD, COLOR,

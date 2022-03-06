@@ -10,11 +10,11 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.lwjgl.opengl.Display;
 
-public class Dunyahile
+public class Duny4hil3
         implements Globals {
     private static final Logger LOGGER = LogManager.getLogger((String)"Duny4hil3");
     public static final String NAME = "Duny4hil3";
-    public static final String VERSION = "1.3.1-6781038d0b30";
+    public static final String VERSION = "1.3.1";
 
     public static void preInit() {
         GlobalExecutor.EXECUTOR.submit(() -> Sphere.cacheSphere(LOGGER));
@@ -22,6 +22,7 @@ public class Dunyahile
 
     public static void init() {
         LOGGER.info("\n\nInitializing Duny4hil3.");
+        LOGGER.info("yes its literally the same thing cry about it");
         Display.setTitle((String)"Duny4hil3 - 1.3.1");
         DiscordPresence.start();
         Managers.load();

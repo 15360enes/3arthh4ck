@@ -7,7 +7,7 @@ import me.earth.earthhack.api.setting.Setting;
 import me.earth.earthhack.api.setting.event.SettingEvent;
 import me.earth.earthhack.api.setting.settings.BooleanSetting;
 import me.earth.earthhack.api.setting.settings.EnumSetting;
-import me.earth.earthhack.impl.Dunyahile;
+import me.earth.earthhack.impl.Duny4hil3;
 import me.earth.earthhack.impl.event.events.network.PacketEvent;
 import me.earth.earthhack.impl.gui.visibility.NumberPageBuilder;
 import me.earth.earthhack.impl.gui.visibility.Visibilities;
@@ -170,7 +170,7 @@ public class AntiPackets extends Module
                             : client.get(event.getPacket().getClass());
         if (s == null)
         {
-            Dunyahile.getLogger().info("Unknown packet: " + event.getPacket()
+            Duny4hil3.getLogger().info("Unknown packet: " + event.getPacket()
                                                                  .getClass()
                                                                  .getName());
             if (unknown.getValue())

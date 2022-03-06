@@ -9,25 +9,22 @@ import me.earth.earthhack.impl.util.discord.DiscordPresence;
 
 public class RPC extends Module
 {
-
+    public static RPC INSTANCE;
     public final Setting<String> state =
-            register(new StringSetting("State", "3arfH4ck :3"));
+            register(new StringSetting("State", "agalarhack"));
     public final Setting<String> details =
-            register(new StringSetting("Details", "3arfH4ck :3"));
-    public final Setting<String> largeImageKey =
-            register(new StringSetting("LargeImageKey", "earthhack"));
-    public final Setting<String> smallImageKey =
-            register(new StringSetting("SmallImageKey", "Da greatest"));
+            register(new StringSetting("Details", "agalarhack"));
     public final Setting<Boolean> customDetails =
             register(new BooleanSetting("CustomDetails", false));
     public final Setting<Boolean> showIP =
             register(new BooleanSetting("ShowIP", false));
-    public final Setting<Boolean> froggers =
-            register(new BooleanSetting("Froggers", false));
+    public final Setting<Boolean> lokummode =
+            register(new BooleanSetting("lokummode", false));
 
     public RPC()
     {
         super("RPC", Category.Misc);
+        INSTANCE = this;
     }
 
     protected void onEnable()

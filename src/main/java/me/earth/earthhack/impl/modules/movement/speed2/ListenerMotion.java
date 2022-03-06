@@ -1,4 +1,4 @@
-package me.earth.earthhack.impl.modules.movement.speed;
+package me.earth.earthhack.impl.modules.movement.speed2;
 
 import me.earth.earthhack.api.cache.ModuleCache;
 import me.earth.earthhack.impl.event.events.network.MotionUpdateEvent;
@@ -9,14 +9,14 @@ import me.earth.earthhack.impl.modules.player.freecam.Freecam;
 import me.earth.earthhack.impl.util.math.position.PositionUtil;
 import me.earth.earthhack.impl.util.minecraft.MovementUtil;
 
-public final class ListenerMotion extends ModuleListener<Speed,MotionUpdateEvent>
+public final class ListenerMotion extends ModuleListener<Speed2,MotionUpdateEvent>
 {
     private static final ModuleCache<PacketFly> PACKET_FLY =
             Caches.getModule(PacketFly.class);
     private static final ModuleCache<Freecam> FREECAM =
             Caches.getModule(Freecam.class);
 
-    public ListenerMotion(Speed module)
+    public ListenerMotion(Speed2 module)
     {
         super(module, MotionUpdateEvent.class);
     }
@@ -41,10 +41,10 @@ public final class ListenerMotion extends ModuleListener<Speed,MotionUpdateEvent
             if (module.onGroundStage == 3)
             {
                 event.setY(event.getY()
-                            + (PositionUtil.isBoxColliding()
-                                ? 0.2
-                                : 0.4)
-                            + MovementUtil.getJumpSpeed());
+                        + (PositionUtil.isBoxColliding()
+                        ? 0.2
+                        : 0.4)
+                        + MovementUtil.getJumpSpeed());
             }
         }
     }

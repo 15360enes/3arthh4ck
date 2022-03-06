@@ -1,4 +1,4 @@
-package me.earth.earthhack.impl.modules.movement.speed;
+package me.earth.earthhack.impl.modules.movement.speed2;
 
 import me.earth.earthhack.impl.event.events.network.PacketEvent;
 import me.earth.earthhack.impl.event.listeners.ModuleListener;
@@ -6,9 +6,9 @@ import net.minecraft.client.entity.EntityPlayerSP;
 import net.minecraft.network.play.server.SPacketEntityVelocity;
 
 public final class ListenerVelocity extends
-        ModuleListener<Speed, PacketEvent.Receive<SPacketEntityVelocity>>
+        ModuleListener<Speed2, PacketEvent.Receive<SPacketEntityVelocity>>
 {
-    public ListenerVelocity(Speed module)
+    public ListenerVelocity(Speed2 module)
     {
         super(module, PacketEvent.Receive.class, SPacketEntityVelocity.class);
     }

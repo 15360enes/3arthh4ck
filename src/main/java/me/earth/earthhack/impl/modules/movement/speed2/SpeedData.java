@@ -1,10 +1,10 @@
-package me.earth.earthhack.impl.modules.movement.speed;
+package me.earth.earthhack.impl.modules.movement.speed2;
 
 import me.earth.earthhack.api.module.data.DefaultData;
 
-public final class SpeedData extends DefaultData<Speed>
+public final class SpeedData extends DefaultData<Speed2>
 {
-    public SpeedData(Speed module)
+    public SpeedData(Speed2 module)
     {
         super(module);
         register(module.mode, "-Instant always move at 20.5 km/h." +
@@ -25,7 +25,7 @@ public final class SpeedData extends DefaultData<Speed>
     @Override
     public String getDescription()
     {
-        return "Movement hacks that make you go faster.";
+        return "for people too lazy to make macros like me.";
     }
 
 }
