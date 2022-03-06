@@ -1,3 +1,1 @@
-#Agalarhack
-
-heheheha
+skidimin ismi güzelmi agalarhack asdıoasdngouasdbhgıkopfa
